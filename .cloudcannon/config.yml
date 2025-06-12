@@ -1,0 +1,38 @@
+collections:
+  blog:
+    path: "content/blog"
+    output: true
+    label: "Blog Posts"
+    create: true
+    delete: true
+    editor:
+      fields:
+        - name: title
+          label: Title
+        - name: date
+          label: Date
+        - name: image
+          label: Featured Image
+        - name: body
+          label: Content
+
+  gallery:
+    path: "content/gallery.md"
+    output: true
+    label: "Photo Gallery"
+    editor:
+      fields:
+        - name: title
+          label: Title
+        - name: description
+          label: Description
+        - name: images
+          label: Gallery Images
+          type: image
+          array: true
+        - name: body
+          label: Page Content
+          type: markdown
+
+media_dir: "public/gallery"
+media_url: "/gallery/"
