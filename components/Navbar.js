@@ -9,7 +9,6 @@ export default function Navbar() {
         <li><Link href="/gallery">Gallery</Link></li>
         <li><Link href="/services">Services</Link></li>
         <li><Link href="/blog">Blog</Link></li>
-        <li><a href="/admin" target="_blank" rel="noopener noreferrer">Admin</a></li>
       </ul>
       <style jsx>{`
         nav {
