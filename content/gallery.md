@@ -5,3 +5,5 @@ images:
   -
 ---
 Welcome to our photo gallery! Browse the images below to see our recent work.
+
+![](/uploads/ugaaaa.webp)
