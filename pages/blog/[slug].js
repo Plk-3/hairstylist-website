@@ -12,8 +12,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const markdownWithMeta = fs.readFileSync(path.join('content/blog', params.slug + '.md'), 'utf-8')
-  const { data, content } = matter(markdownWithMeta)
-  return { props: { data, content } }
+ const { data, content } = matter(markdownWithMeta)
+// Ensure date is a string
+const safeData = { ...data, date: data.date ? String(data.date) : null }
+return { props: { data: safeData, content } }
 }
 
 export default function BlogPost({ data, content }) {
